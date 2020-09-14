@@ -1,23 +1,154 @@
-# Assigment List
-* Assigment 1
+# HW1
+# **Pattern Oriented Software Design 2020 Fall Assignment 1**  
 
-# Homework Rule
+## **Notice**  
+* **Due on (Tuesday, September 22, 2020 23:59).  
+* **If your code fails to compile on jenkins server, you'll get no point for the assignment.**  
+* **For any output of double, it should be in the form of `%.3f`**  
 
-1. 作業準時交，分數視通過測試
+## **Score**
+1. Unit tests written by yourself: 50%.  
+2. Unit tests written by TA: 50%.  
 
-   (若無撰寫當次作業欲開發功能之單元測試，將酌量扣分)
+## **Useful Reference**
+[Makefile Wiki](https://en.wikipedia.org/wiki/Makefile)  
+[Makefile Tutorial](https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/makefile_tutorial)
+[Googletest Primer](https://github.com/google/googletest/blob/master/googletest/docs/primer.md)  
 
-2. Jenkins會於deadline準時關閉,作業於deadline後"兩天內"交出，以遲交計算，分數*70%
+## **Requirement**  
+**Note: Each class below are the skeleton. You should finish implementation by yourself.**  
 
-    (若有補交請寄信通知助教 "posd2020ta@gmail.com"，若無寄信將不予受理)
+1. `Shape` is an abstract class , don't modify it!!!  
+```
+class Shape {
+public:
+    virtual double area() const = 0;
+    virtual double perimeter() const = 0;
+    virtual std::string info() const = 0;
+};
+```
 
-3. 作業於deadline後"兩天後"交出，將不予計分，此次作業0分計算
+2. Implement `Rectangle` and functions inherit from `Shape`.  
+   Write correspond unit test for the class in file `ut_rectangle.h` under `test` folder.  
+```
+class Rectangle: public Shape {
+public: 
+    Rectangle(double length, double width) {
+        // If the rectangle can't be successfully created,
+        // handle the exception by throwing string "This is not a rectangle!"
+    }
     
-    **若有其他問題，亦可至宏裕科技大樓Lab1321 軟體系統實驗室，找助教詢問**
+    double area() const {
+        // return the area of the Rectangle.
+    }
+    
+    double perimeter() const {
+        // return the perimeter of the Rectangle.
+    }
+    
+    std::string info() const {
+        // return the info of the Rectangle.
+        // ex. Rectangle (3.712, 4.000)
+    }
+}
+```
 
-### Environment Setting
+3. Implement `Ellipse` and functions inherit from `Shape`.  
+   Write correspond unit test for the class in file `ut_ellipse.h` under `test` folder.  
+```
+class Ellipse: public Shape{
+public: 
+    Ellipse(double semiMajorAxes, double semiMinorAxes) {
+        // If the ellipse can't be successfully created,
+        // handle the exception by throwing string "This is not a ellipse!"
+    }
+    
+    double area() const {
+        // return the area of the Ellipse.
+    }
+    
+    double perimeter() const {
+        // return the perimeter of the Ellipse.
+    }
+    
+    std::string info() const {
+        // return the info of the Ellipse.
+        // ex. Ellipse (3.712, 4.000)
+    }
+}
+```
+* Use `M_PI` in <math.h> for caculation of `π`.  
 
-`Environment Setting`: [https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/environment-setting#homework-upload-tutorial](https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/environment-setting#homework-upload-tutorial)
 
-### Makefile Tutorial
-`makefile_tutorial`: [https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/makefile_tutorial](https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/makefile_tutorial)
+4. Implement `Triangle` and functions inherit from `Shape`.  
+   Write correspond unit test for the class in file `ut_triangle.h` under `test` folder.  
+```
+class Triangle: public Shape{
+public: 
+    Triangle(std::vector<TwoDimensionalCoordinate*> vectors) {
+        // If the triangle can't be successfully created,
+        // handle the exception by throwing string "This is not a triangle!"
+    }
+    
+    double area() const {
+        // return the area of the Triangle.
+    }
+    
+    double perimeter() const {
+        // return the perimeter of the Triangle.
+    }
+    
+    std::string info() const {
+        // return the info of the Triangle.
+        // ex. Triangle ([0.000, 0.000], [0.000, -3.141], [-4.000, 0.000])
+    }
+}
+```
+4. Implement `TwoDimensionalCoordinate`.  
+```
+class TwoDimensionalCoordinate {
+public:
+    TwoDimensionalCoordinate(double x, double y):{}
+
+    double getX() {
+        // return x;
+	}
+
+	double getY() {
+		// return y;
+	}
+};
+```
+
+5. Write correspond makefile to generate binary file for all ut file named `ut_all` under the `bin` folder.  
+
+## **File Structure**
+This time your directory structure should be like:
+ - 學號_HW
+    - src
+
+      shape.h
+
+      ellipse.h
+
+      rectangle.h
+      
+      triangle.h
+      
+      two_dimensional_coordinate.h
+
+    - test
+
+      ut_shape.cpp
+      
+      ut_ellipse.h
+
+      ut_rectangle.h
+      
+      ut_triangle.h
+      
+    - bin
+
+      ut_all
+
+    - makefile
