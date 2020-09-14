@@ -1,4 +1,3 @@
-# HW1
 # **Pattern Oriented Software Design 2020 Fall Assignment 1**  
 
 ## **Notice**  
