@@ -42,7 +42,7 @@ EX
 
 ### 教學文件閱讀順序
 
-1. 環境設定.pdf
+1. [Enviorment SetUp](https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/posd2020f_assignment/blob/master/Enviroment%20SetUp.md)
 
 2. 文字編輯器安裝教學.pdf 
 
