@@ -11,7 +11,7 @@
 
 ## **Useful Reference**
 [Makefile Wiki](https://en.wikipedia.org/wiki/Makefile)  
-[Makefile Tutorial](https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/makefile_tutorial)
+[Makefile Tutorial](https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/makefile_tutorial)  
 [Googletest Primer](https://github.com/google/googletest/blob/master/googletest/docs/primer.md)  
 
 ## **Requirement**  
