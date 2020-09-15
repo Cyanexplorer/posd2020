@@ -7,7 +7,7 @@
 
 ## **Score**
 1. Unit tests written by yourself: 50%.  
-2. Unit tests written by TA: 50%.  
+2. Unit tests written by TA: 50%.(-10 for each fail test)  
 
 ## **Useful Reference**
 [Makefile Wiki](https://en.wikipedia.org/wiki/Makefile)  
@@ -138,7 +138,7 @@ This time your directory structure should be like:
 
     - test
 
-      ut_shape.cpp
+      ut_main.cpp
       
       ut_ellipse.h
 
