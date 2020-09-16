@@ -117,7 +117,7 @@ public:
     }
 }
 ```
-4. Implement `TwoDimensionalCoordinate`.  
+5. Implement `TwoDimensionalCoordinate`.  
 ```
 class TwoDimensionalCoordinate {
 public:
@@ -133,7 +133,7 @@ public:
 };
 ```
 
-5. Write correspond makefile to generate binary file for all ut file named `ut_main` under the `bin` folder.  
+6. Write correspond makefile to generate binary file for all ut file named `ut_main` under the `bin` folder.  
 
 ## **File Structure**
 This time your directory structure should be like:
