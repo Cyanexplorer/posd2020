@@ -16,7 +16,7 @@
 
 ### Environment Setting
 
-`Environment Setting`: [https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/environment-setting#homework-upload-tutorial](https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/environment-setting#homework-upload-tutorial)
+`Environment Setting`: [https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/environment-setting](https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/environment-setting)
 
 ### Makefile Tutorial
 `makefile_tutorial`: [https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/makefile_tutorial](https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/makefile_tutorial)
