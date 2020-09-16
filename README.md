@@ -68,8 +68,8 @@ public:
 
 * Example for info test:
 ```
-    Rectangle rectangle(3, 4);
-    ASSERT_EQ("Rectangle (3.000, 4.000)", rectangle.info());
+    Rectangle rectangle(3.712, 4);
+    ASSERT_EQ("Rectangle (3.712, 4.000)", rectangle.info());
 ```
 
 3. Implement `Ellipse` and functions inherit from `Shape`.  
