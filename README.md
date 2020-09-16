@@ -66,6 +66,12 @@ public:
     ASSERT_NO_THROW(Rectangle(1, 1));
 ```
 
+* Example for info test:
+```
+    Shape* rectangle = new Rectangle(3.147, 4);
+    ASSERT_EQ("Rectangle (3.147, 4.000)", rectangle->info());
+```
+
 3. Implement `Ellipse` and functions inherit from `Shape`.  
    Write correspond unit test for the class in file `ut_ellipse.h` under `test` folder.  
 ```
