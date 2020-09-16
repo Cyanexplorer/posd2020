@@ -13,6 +13,7 @@
 ## **Useful Reference**
 [C++ Exception Handling](https://www.tutorialspoint.com/cplusplus/cpp_exceptions_handling.htm)  
 [Inheritance in C++](https://www.geeksforgeeks.org/inheritance-in-c/)  
+[C++ vector](http://www.cplusplus.com/reference/vector/vector/)  
 [Makefile Wiki](https://en.wikipedia.org/wiki/Makefile)  
 [Makefile Tutorial](https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/makefile_tutorial)  
 [Googletest Primer](https://github.com/google/googletest/blob/master/googletest/docs/primer.md)  
@@ -66,6 +67,12 @@ public:
     ASSERT_NO_THROW(Rectangle(1, 1));
 ```
 
+* Example for info test:
+```
+    Rectangle rectangle(3.712, 4);
+    ASSERT_EQ("Rectangle (3.712, 4.000)", rectangle.info());
+```
+
 3. Implement `Ellipse` and functions inherit from `Shape`.  
    Write correspond unit test for the class in file `ut_ellipse.h` under `test` folder.  
 ```
@@ -117,7 +124,7 @@ public:
     }
 }
 ```
-4. Implement `TwoDimensionalCoordinate`.  
+5. Implement `TwoDimensionalCoordinate`.  
 ```
 class TwoDimensionalCoordinate {
 public:
@@ -132,8 +139,17 @@ public:
 	}
 };
 ```
+* Example for Triangle with TwoDimensionalCoordinate:
+```
+    vector<TwoDimensionalCoordinate*> triangleVector;
+    triangleVector.push_back(new TwoDimensionalCoordinate(0, 0));
+    triangleVector.push_back(new TwoDimensionalCoordinate(3, 0));
+    triangleVector.push_back(new TwoDimensionalCoordinate(0, 4));
+    Triangle triangle(triangleVector);
+    ASSERT_EQ("Triangle ([0.000, 0.000], [3.000, 0.000], [0.000, 4.000])", triangle.info());
+```
 
-5. Write correspond makefile to generate binary file for all ut file named `ut_main` under the `bin` folder.  
+6. Write correspond makefile to generate binary file for all ut file named `ut_main` under the `bin` folder.  
 
 ## **File Structure**
 This time your directory structure should be like:
