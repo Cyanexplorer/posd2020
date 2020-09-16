@@ -13,6 +13,7 @@
 ## **Useful Reference**
 [C++ Exception Handling](https://www.tutorialspoint.com/cplusplus/cpp_exceptions_handling.htm)  
 [Inheritance in C++](https://www.geeksforgeeks.org/inheritance-in-c/)  
+[C++ vector](http://www.cplusplus.com/reference/vector/vector/)
 [Makefile Wiki](https://en.wikipedia.org/wiki/Makefile)  
 [Makefile Tutorial](https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/makefile_tutorial)  
 [Googletest Primer](https://github.com/google/googletest/blob/master/googletest/docs/primer.md)  
