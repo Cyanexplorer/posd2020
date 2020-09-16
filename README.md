@@ -162,7 +162,7 @@ This time your directory structure should be like:
     │   ├── ellipse.h
     │   ├── rectangle.h
     │   ├── triangle.h
-    │   └── two_dimensional_vector.h
+    │   └── two_dimensional_coordinate.h
     ├── test
     │   ├── ut_main.cpp
     │   ├── ut_ellipse.h
