@@ -142,7 +142,7 @@ public:
 ```
 * Example for Triangle with TwoDimensionalCoordinate:
 ```
-    vector<TwoDimensionalCoordinate*> triangleVector;
+    std::vector<TwoDimensionalCoordinate*> triangleVector;
     triangleVector.push_back(new TwoDimensionalCoordinate(0, 0));
     triangleVector.push_back(new TwoDimensionalCoordinate(3, 0));
     triangleVector.push_back(new TwoDimensionalCoordinate(0, 4));
