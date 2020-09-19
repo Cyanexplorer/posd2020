@@ -86,11 +86,11 @@ public:
     
     double area() const {
         // return the area of the Ellipse.
-        // L=2πb+4(a-b)
     }
     
     double perimeter() const {
         // return the perimeter of the Ellipse.
+        // L=2πb+4(a-b)
     }
     
     std::string info() const {
