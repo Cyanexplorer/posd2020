@@ -3,7 +3,7 @@
 ## **Notice**  
 * **Due on (Tuesday, September 22, 2020 23:59).**  
 * **If your code fails to compile on jenkins server, you'll get no point for the assignment.**  
-* **For return type of double, should be assert to accuracy `%3f`.**  
+* **For return type of double, should be assert to accuracy absolute = 0.001.**  
 * **For retrun string of number, should be in form of `%3f`. ex:"3.141", "2.000".**  
 
 ## **Score**
