@@ -130,7 +130,7 @@ public:
 ```
 class TwoDimensionalCoordinate {
 public:
-    TwoDimensionalCoordinate(double x, double y):{}
+    TwoDimensionalCoordinate(double x, double y){}
 
     double getX() {
         // return x;
