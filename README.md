@@ -134,11 +134,11 @@ public:
 
     double getX() {
         // return x;
-	}
+    }
 
-	double getY() {
-		// return y;
-	}
+    double getY() {
+        // return y;
+    }
 };
 ```
 * Example for Triangle with TwoDimensionalCoordinate:
