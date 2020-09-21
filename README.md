@@ -95,7 +95,7 @@ public:
     
     std::string info() const {
         // return the info of the Ellipse.
-        // ex. Ellipse (3.712, 4.000)
+        // ex. Ellipse (4.000, 3.712)
     }
 }
 ```
