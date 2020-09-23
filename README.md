@@ -20,7 +20,7 @@
 ## **Requirement**  
 1. Modify exception handling of class `Ellipse`.  
 *  Change the exception string into "This is not an ellipse!"  
-*  Make sure semiMajorAxes >= semiMinorAxes, if not throw exception "This is not an ellipse!" in constructor.   
+*  Make sure semiMajorAxes >= semiMinorAxes. If not, throw exception "This is not an ellipse!" in constructor.   
 
 2. Implement `quickSort()` in `sort.h` and write corresponding unit test in `ut_sort.h`.  
 ```
