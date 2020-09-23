@@ -29,7 +29,7 @@ void quickSort(RandomAccessIterator first, RandomAccessIterator last, Compare co
 ```
 * `Compare`: Binary function that accepts two elements in the range as arguments, and returns a value convertible to bool. It should be able to accpet `Lambda Expressions`, `Funtion`, `Object` and you should write test that covers them. (You may reference [C++ Sort](http://www.cplusplus.com/reference/algorithm/sort/))  
 * `RandomAccessIterator`: Random-access iterators to the initial and final positions of the sequence to be sorted. (You may reference [C++ Sort](http://www.cplusplus.com/reference/algorithm/sort/))  
-* `quickSort()`: Implement a quicksort function **WITHOUT using any sorting function from c/c++ library**, you should write the sorting algorithm by youself. (You may reference [QuickSort Wiki](https://en.wikipedia.org/wiki/Quicksort))  
+* `quickSort()`: Implement a quicksort function **WITHOUT using any sorting function from c/c++ library**, you should write the sorting algorithm by yourself. (You may reference [QuickSort Wiki](https://en.wikipedia.org/wiki/Quicksort))  
 
 3. Implement the following function in `sort.h`.  
 
