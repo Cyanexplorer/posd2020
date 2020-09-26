@@ -1,7 +1,7 @@
 # **Pattern Oriented Software Design 2020 Fall Assignment 2**  
 
 ## **Notice**  
-* **Due on (Monday, September 29, 2020 23:59).**  
+* **Due on Tuesday, September 29, 2020 23:59.**  
 * **If your code fails to compile on jenkins server, you'll get no point for the assignment.**  
 * **For return string of number, should be in form of `%3f`.**  
 
