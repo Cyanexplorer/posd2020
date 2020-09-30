@@ -151,7 +151,7 @@ This time your directory structure should be like:
     │   ├── ut_ellipse.h
     │   ├── ut_rectangle.h
     │   ├── ut_sort.h
-    │   ├── ut_termianl.h
+    │   ├── ut_terminal.h
     │   └── ut_triangle.h
     │
     ├── makefile
