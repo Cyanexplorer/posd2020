@@ -4,7 +4,7 @@
 
 * [Assigment 2](https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/posd2020f_assignment/tree/HW2)  
 
-* [Assigment 3](https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/posd2020f_assignment/tree/HW3) 
+* Assigment 3
 
 # Homework Rule
 
