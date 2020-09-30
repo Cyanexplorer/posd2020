@@ -23,6 +23,8 @@ bin/geo input.txt output.txt area inc
 
 2. Implement a `main` function in `main.cpp` to handle input from terminal.  
    The input will be as following example:  
+   [input.txt](https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/posd2020f_assignment/blob/HW3/input.txt)  
+   [output.txt](https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/posd2020f_assignment/blob/HW3/output.txt) 
    ```bin/geo input.txt output.txt area inc```  
    `argv[0]`: The path of binary file.  
    `argv[1]`: The full name of input file.  
