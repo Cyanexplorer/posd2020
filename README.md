@@ -40,17 +40,23 @@ public:
     std::string showResult() {}
 }
 ```
+* Example:
+```
+Terminal terminal("Rectangle (2, 2) Rectangle area inc");
+ASSERT_EQ("1.000\n4.000", terminal.showResult());
+```
+
 * The form of the input string should be `{Shape}`+`{Feature to sort}`+`{Order}`, if any of condition missing, the constructure should handle the exception by throwing std::string "invalid input".  
 
   Valid:  
     ```
-    Rectangle (3.7, 4.2) Ellipse (3, 4) Triangle ([0,-3], [-3,0], [0,-4]) perimeter inc
+    Rectangle (3.7, 4.2) Ellipse (3, 4) Triangle ([0,-3], [-3,0], [0,-4]) area inc
     ``` 
   Invalid:  
     ```
-    Rectangle (3.7, 4.2) Ellipse (3, 4) perimeter
+    Rectangle (3.7, 4.2) Ellipse (3, 4) area
     Rectangle (3.7, 4.2) Ellipse (3, 4) inc
-    perimeter inc
+    area inc
     ```   
 
 4. Rules for the input string:  
