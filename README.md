@@ -116,8 +116,8 @@ public:
   
 6. Modify makfile to generate binary file `geo` under "bin" folder.  
    The example usage `geo`:  
-   [input.txt](https://ssl-gitlab.csie.ntut.edu.tw/108598011/posd2020f_assignment/blob/HW3/input.txt)  
-   [output.txt](https://ssl-gitlab.csie.ntut.edu.tw/108598011/posd2020f_assignment/blob/HW3/output.txt)  
+   [input.txt](https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/posd2020f_assignment/blob/HW3/input.txt)  
+   [output.txt](https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/posd2020f_assignment/blob/HW3/output.txt)  
    ```
    bin/geo input.txt output.txt area inc
    ```
