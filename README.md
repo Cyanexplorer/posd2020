@@ -32,7 +32,7 @@ bin/geo input.txt output.txt area inc
    `argv[3]`: The feature of shape that sorting basis on.  
    `argv[4]`: The 'inc' for increasing, 'dec' for decreasing.  
 
-3. Implement class `Terminal` in `terminal.h`, `Terminal` is for handling the input and gnerate output, and add unit test in `ut_terminal.h`, the test should covered the rules that mention bellow.  
+3. Implement class `Terminal` in `terminal.h`, `Terminal` is for handling the input and generate output, and add unit test in `ut_terminal.h`, the test should covered the rules that mention bellow.  
 ```
 class Terminal {
 public:
