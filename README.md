@@ -63,7 +63,7 @@ ASSERT_EQ("1.000\n4.000", terminal.showResult());
 * `{Shape}` will be in the form of `{Shape Type}` + `{SPACE}` + `{Argument}`.  
   The first letter of `{Shape Type}` should be capital.
   There must be at least one `{SPACE}` between `{Shape Type}` and `{Argument}`.  
-  The `{Argument}` must be wrapped by `()` and the number must be split by `,`, but the `{SPACE}` can be ignore.  
+  The `{Argument}` must be wrapped by `()` and the number must be split by `,`, but the `{SPACE}` can be ignored.  
   Valid:  
   ```
   Rectangle (3, 4)
@@ -97,7 +97,7 @@ ASSERT_EQ("1.000\n4.000", terminal.showResult());
   Terminal terminal("Rectangle (2, 2) Rectangle (1, 1) Ellipse (-1, -1) area inc");
   ASSERT_EQ("1.000\n4.000", terminal.showResult());
   ```
-* If all `{Shape}` is invalid, meaning the `{Shape Type}` condition is missing, throw std::string "invalid input" in constructure.  
+* If all `{Shape}` is invalid, meaning the `{Shape Type}` condition is missing, throw std::string "invalid input" in constructor.  
   Example:  
   ```
   try {
