@@ -42,7 +42,7 @@ public:
 ```
 * Example:
 ```
-Terminal terminal("Rectangle (2, 2) Rectangle （1, 1） area inc");
+Terminal terminal("Rectangle (2, 2) Rectangle (1, 1) area inc");
 ASSERT_EQ("1.000\n4.000", terminal.showResult());
 ```
 
