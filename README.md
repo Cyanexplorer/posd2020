@@ -50,12 +50,12 @@ ASSERT_EQ("1.000\n4.000", terminal.showResult());
 
   Valid:  
     ```
-    Rectangle (3.7, 4.2) Ellipse (3, 4) Triangle ([0,-3], [-3,0], [0,-4]) area inc
+    Rectangle (3.7, 4.2) Ellipse (4, 3) Triangle ([0,-3], [-3,0], [0,-4]) area inc
     ``` 
   Invalid:  
     ```
-    Rectangle (3.7, 4.2) Ellipse (3, 4) area
-    Rectangle (3.7, 4.2) Ellipse (3, 4) inc
+    Rectangle (3.7, 4.2) Ellipse (4, 3) area
+    Rectangle (3.7, 4.2) Ellipse (4, 3) inc
     area inc
     ```   
 
