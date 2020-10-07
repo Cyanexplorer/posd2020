@@ -23,7 +23,7 @@ class Shape {
 public:
     Shape(std::string id); // interface for default color "white".
     Shape(std::string id, std::string color); // interface for color input by user.
-    std::string id() const; // return id of shape
+    std::string id() const; // return id of shape.
     std::string color() const; // return color of shape.
     virtual void addShape(Shape *shape); // throw std::string "Only compound shape can add shape!"
     virtual void deleteShapeById(std::string id); // throw std::string "Only compound shape can delete shape!"
