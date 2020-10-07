@@ -3,7 +3,7 @@
 ## **Notice**  
 * **Due on Tuesday October 13 2020, 23:59.**  
 * **If your code fails to compile on jenkins server, you'll get no point for the assignment.**  
-* **You should add unit test for each requirment under corresponding ut_file.**  
+* **You should add unit test for each newly add requirment under corresponding ut_file.**  
 
 ## **Score**
 1. Usage of Iterator in vector: 10%.  
@@ -25,11 +25,12 @@ public:
     Shape(std::string id, std::string color); // interface for color input by user.
     std::string id() const; // return id of shape
     std::string color() const; // return color of shape.
-    virtual void addShape(Shape *shape); // throw std::string "Only complex shape can add shape!"
-    virtual void deleteShapeById(std::string id); // throw std::string "Only complex shape can delete shape!"
-    virtual Shape* getShapeById(std::string id); // throw std::string "Only complex shape can get shape!"
+    virtual void addShape(Shape *shape); // throw std::string "Only compound shape can add shape!"
+    virtual void deleteShapeById(std::string id); // throw std::string "Only compound shape can delete shape!"
+    virtual Shape* getShapeById(std::string id); // throw std::string "Only compound shape can get shape!"
 };
 ```
+*  `id` should be globally unique.
 *  `color`: is input as "red", "blue", "yellow" etc.
 
 2. Modify interface of `Ellipse`, `Rectangle`, `Triangle` into the following.  
@@ -43,7 +44,7 @@ Rectangle(std::string id, double length, double width)
 Rectangle(std::string id, double length, double width, std::string color)
 
 Triangle(std::string id, vector<TwoDimensionalCoordinate*> coordinates)
-Triangle(std::string id, vector<TwoDimensionalCoordinate*> coordinates, std::string color)
+Triangle(std::string id, vector<TwoDimensionalCoordinate*> coordinates, std::color)
 ```
 
 3. Implement `CompoundShape` class in `compound_shape.h` and the corresponding unit test in `ut_compound_shape.h`.  
@@ -51,7 +52,7 @@ Triangle(std::string id, vector<TwoDimensionalCoordinate*> coordinates, std::str
 class CompoundShape : public Shape {
 public:
         CompoundShape(std::string id, std::vector<Shape*>* shapes) {
-            // The default color of compound shape should be "Transparent".
+            // The default color of compound shape should be "transparent".
             
             // When there's no shape contain in the compound shape,
             // should throw std::string "This is not a compound shape!"
@@ -67,7 +68,7 @@ public:
     
         std::string info() const {
             // return list of all containing shapes info with wrapped of "CompoundShape {}".
-            // ex."CompoundShape {[Rectangle (3.7, 4.2), Ellipse (4, 3), Triangle ([0,-3], [-3,0], [0,-4])]}"
+            // ex."Compound Shape {Ellipse (4.000, 3.000), Rectangle (3.000, 4.000), Triangle ([0.000, 0.000], [3.000, 0.000], [0.000, 4.000])}"
         }
         
         void addShape(Shape* shape) {
@@ -76,13 +77,13 @@ public:
         
         void deleteShapeById(std::string id) {
             // search and delete a shape through id,
-            // search all the containing shapes and the tree structure bellow,
+            // search all the containing shapes and the tree structure below,
             // if no match of id, throw std::string "Expected delete shape but shape not found"
         }
         
         Shape* getShapeById(std::string id) {
             // search and return a shape through id,
-            // search all the containing shapes and the tree structure bellow,
+            // search all the containing shapes and the tree structure below,
             // if no match of id, throw std::string "Expected get shape but shape not found"
         }
 }
