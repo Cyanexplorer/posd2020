@@ -1,28 +1,111 @@
-# Assigment List
+# **Pattern Oriented Software Design 2020 Fall Assignment 4**  
 
-* [Assigment 1](https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/posd2020f_assignment/tree/HW1)  
+## **Notice**  
+* **Due on Tuesday October 13 2020, 23:59.**  
+* **If your code fails to compile on jenkins server, you'll get no point for the assignment.**  
+* **You should add unit test for each requirment under corresponding ut_file.**  
 
-* [Assigment 2](https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/posd2020f_assignment/tree/HW2)  
+## **Score**
+1. Usage of Iterator in vector: 10%.  
+2. Unit tests written by yourself: 40%.  
+3. Unit tests written by TA: 50%.  
 
-* [Assigment 3](https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/posd2020f_assignment/tree/HW3) 
+## **Useful Reference**  
+[Composite pattern](https://en.wikipedia.org/wiki/Composite_pattern)  
+[Iterators in C++](geeksforgeeks.org/iterators-c-stl/)  
+[C++ Overloading](https://www.tutorialspoint.com/cplusplus/cpp_overloading.htm)  
 
-# Homework Rule
+## **Requirement**   
 
-1. 作業準時交，分數視通過測試
+1. Add the following virtual function in `Shape`, add the implementations in `shape.cpp` if needed.   
+ ```
+class Shape {
+public:
+    Shape(std::string id) // interface for default color "white".
+    Shape(std::string id, std::string color); // interface for color input by user.
+    string id() const; // return id of shape
+    string color() const; // return color of shape.
+    virtual void addShape(Shape *shape); // throw std::string "Only complex shape can add shape!"
+    virtual void deleteShapeById(std::string id); // throw std::string "Only complex shape can delete shape!"
+    virtual Shape* getShapeById(std::string id); // throw std::string "Only complex shape can get shape!"
+};
+```
+*  `color`: is input as "red", "blue", "yellow" etc.
 
-   (若無撰寫當次作業欲開發功能之單元測試，將酌量扣分)
+2. Modify interface of `Ellipse`, `Rectangle`, `Triangle` into the following.  
+   (Now you will have two interface for each of these three shapes.)
 
-2. Jenkins會於deadline準時關閉,作業於deadline後"兩天內"交出，以遲交計算，分數*70%
+```
+Ellipse(std::string id, double semiMajorAxes, double semiMinorAxes) 
+Ellipse(std::string id, double semiMajorAxes, double semiMinorAxes, std::string color)
 
-    (若有補交請寄信通知助教 "posd2020ta@gmail.com"，若無寄信將不予受理)
+Rectangle(std::string id, double length, double width)
+Rectangle(std::string id, double length, double width, std::string color)
 
-3. 作業於deadline後"兩天後"交出，將不予計分，此次作業0分計算
+Triangle(std::string id, vector<TwoDimensionalCoordinate*> coordinates)
+Triangle(std::string id, vector<TwoDimensionalCoordinate*> coordinates, std::color)
+```
+
+3. Implement `CompoundShape` class in `compound_shape.h` and the corresponding unit test in `ut_compound_shape.h`.  
+```
+class CompoundShape : public Shape {
+public:
+        CompoundShape(string id, vector<Shape*>* shapes) {
+            // The default color of compound shape should be "Transparent".
+            
+            // When there's no shape contain in the compound shape,
+            // should throw std::string "This is not a compound shape!"
+        }
+
+        double area() const {
+            // return sum of all containing shapes area.
+        }
+
+        double perimeter() const { 
+            // return sum of all containing shapes perimeter.
+        }
     
-    **若有其他問題，亦可至宏裕科技大樓Lab1321 軟體系統實驗室，找助教詢問**
+        string info() const {
+            // return list of all containing shapes info with wrapped of "CompoundShape {}".
+            // ex."CompoundShape {[Rectangle (3.7, 4.2), Ellipse (3, 4), Triangle ([0,-3], [-3,0], [0,-4])]}"
+        }
+        
+        void addShape(Shape* shape) {
+            // add shape into compound shape.
+        }
+        
+        void deleteShapeById(string id) {
+            // search and delete a shape through id,
+            // search all the containing shapes and the tree structure bellow,
+            // if no match of id, throw std::string "Expected delete shape but shape not found"
+        }
+        
+        Shape* getShapeById(string id) {
+            // search and return a shape through id,
+            // search all the containing shapes and the tree structure bellow,
+            // if no match of id, throw std::string "Expected get shape but shape not found"
+        }
+}
+```
 
-### Environment Setting
+#### File structure:
+```
+├── bin
+│   └── ut_all
+├── src
+│   ├── shape.h
+│   ├── shape.cpp
+│   ├── ellipse.h
+│   ├── rectangle.h
+│   ├── triangle.h
+│   ├── compound_shape.h
+│   └── two_dimensional_coordinate.h
+├── test
+│   ├── ut_main.cpp
+│   ├── ut_ellipse.h
+│   ├── ut_rectangle.h
+│   ├── ut_triangle.h
+│   └── ut_compound_shape.h
+└── makefile
 
-`Environment Setting`: [https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/environment-setting](https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/environment-setting)
-
-### Makefile Tutorial
-`makefile_tutorial`: [https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/makefile_tutorial](https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/makefile_tutorial)
+```
