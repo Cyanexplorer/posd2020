@@ -17,7 +17,7 @@
 
 ## **Requirement**   
 
-1. Add the following virtual function in `Shape`, add the implementations in `shape.cpp` if needed.   
+1. Add the following function in `Shape`, add the implementations in `shape.cpp` if needed.   
  ```
 class Shape {
 public:
