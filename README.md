@@ -30,7 +30,6 @@ public:
     virtual Shape* getShapeById(std::string id); // throw std::string "Only compound shape can get shape!"
 };
 ```
-*  `id` should be globally unique.
 *  `color`: is input as "red", "blue", "yellow" etc.
 
 2. Modify interface of `Ellipse`, `Rectangle`, `Triangle` into the following.  
