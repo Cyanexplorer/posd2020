@@ -67,7 +67,7 @@ public:
     
         string info() const {
             // return list of all containing shapes info with wrapped of "CompoundShape {}".
-            // ex."CompoundShape {[Rectangle (3.7, 4.2), Ellipse (3, 4), Triangle ([0,-3], [-3,0], [0,-4])]}"
+            // ex."CompoundShape {[Rectangle (3.7, 4.2), Ellipse (4, 3), Triangle ([0,-3], [-3,0], [0,-4])]}"
         }
         
         void addShape(Shape* shape) {
