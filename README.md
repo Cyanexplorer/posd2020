@@ -91,7 +91,7 @@ public:
 #### File structure:
 ```
 ├── bin
-│   └── ut_all
+│   └── ut_main
 ├── src
 │   ├── shape.h
 │   ├── shape.cpp
