@@ -23,8 +23,8 @@ class Shape {
 public:
     Shape(std::string id) // interface for default color "white".
     Shape(std::string id, std::string color); // interface for color input by user.
-    string id() const; // return id of shape
-    string color() const; // return color of shape.
+    std::string id() const; // return id of shape
+    std::string color() const; // return color of shape.
     virtual void addShape(Shape *shape); // throw std::string "Only complex shape can add shape!"
     virtual void deleteShapeById(std::string id); // throw std::string "Only complex shape can delete shape!"
     virtual Shape* getShapeById(std::string id); // throw std::string "Only complex shape can get shape!"
@@ -50,7 +50,7 @@ Triangle(std::string id, vector<TwoDimensionalCoordinate*> coordinates, std::str
 ```
 class CompoundShape : public Shape {
 public:
-        CompoundShape(string id, vector<Shape*>* shapes) {
+        CompoundShape(std::string id, std::vector<Shape*>* shapes) {
             // The default color of compound shape should be "Transparent".
             
             // When there's no shape contain in the compound shape,
@@ -65,7 +65,7 @@ public:
             // return sum of all containing shapes perimeter.
         }
     
-        string info() const {
+        std::string info() const {
             // return list of all containing shapes info with wrapped of "CompoundShape {}".
             // ex."CompoundShape {[Rectangle (3.7, 4.2), Ellipse (4, 3), Triangle ([0,-3], [-3,0], [0,-4])]}"
         }
@@ -74,13 +74,13 @@ public:
             // add shape into compound shape.
         }
         
-        void deleteShapeById(string id) {
+        void deleteShapeById(std::string id) {
             // search and delete a shape through id,
             // search all the containing shapes and the tree structure bellow,
             // if no match of id, throw std::string "Expected delete shape but shape not found"
         }
         
-        Shape* getShapeById(string id) {
+        Shape* getShapeById(std::string id) {
             // search and return a shape through id,
             // search all the containing shapes and the tree structure bellow,
             // if no match of id, throw std::string "Expected get shape but shape not found"
