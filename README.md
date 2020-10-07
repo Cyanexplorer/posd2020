@@ -21,7 +21,7 @@
  ```
 class Shape {
 public:
-    Shape(std::string id) // interface for default color "white".
+    Shape(std::string id); // interface for default color "white".
     Shape(std::string id, std::string color); // interface for color input by user.
     std::string id() const; // return id of shape
     std::string color() const; // return color of shape.
