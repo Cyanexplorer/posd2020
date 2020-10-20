@@ -8,7 +8,7 @@
 
 * [Assigment 4](https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/posd2020f_assignment/tree/HW4) 
 
-* [Assigment 5]
+* Assigment 5
 
 # Homework Rule
 
@@ -16,11 +16,9 @@
 
    (若無撰寫當次作業欲開發功能之單元測試，將酌量扣分)
 
-2. Jenkins會於deadline準時關閉,作業於deadline後"兩天內"交出，以遲交計算，分數*70%
+2. Jenkins會於deadline準時關閉,作業於deadline接不受理
 
-    (若有補交請寄信通知助教 "posd2020ta@gmail.com"，若無寄信將不予受理)
-
-3. 作業於deadline後"兩天後"交出，將不予計分，此次作業0分計算
+    TA mail: posd2020ta@gmail.com"
     
     **若有其他問題，亦可至宏裕科技大樓Lab1321 軟體系統實驗室，找助教詢問**
 
