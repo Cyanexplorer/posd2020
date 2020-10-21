@@ -219,6 +219,7 @@ filterShape(compoundShape_0, TypeFilter("Compound Shape");
 │   ├── compound_shape.h
 │   ├── iterator.h
 │   ├── null_iterator.h
+│   ├── shape_iterator.h
 │   ├── utility.h
 │   └── two_dimensional_coordinate.h
 ├── test
