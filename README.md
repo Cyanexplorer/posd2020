@@ -164,7 +164,7 @@ Shape* getShapeById(Shape* shape, std::string id) {
 7. Implement following funtion and class in `utility.h` and the corresponding unit test in `ut_utility.h`.  
 ```
 template <class Filter>
-std::deque<Shape*> filterShape(Shape *shape, Filter filter) {
+std::deque<Shape*> filterShape(Shape* shape, Filter filter) {
     // access the shape with iterator pattern.
     // DO NOT use Type Checking or Dynamic Type that would violate OCP to implement the function.
     // return the shapes under the input shape tree sturctur that match the given filter.
