@@ -194,16 +194,16 @@ class TypeFilter {
 * Example usage of `filterShape()` with the filter class:  
 ```
 filterShape(compoundShape_0, AreaFilter(10, 5));
-// retrun shapes that area in range of 10 >= && 5 <=, but don't include compoundShape_0 itself.
+// return shapes that area in range of 10 >= && 5 <=, but don't include compoundShape_0 itself.
 
 filterShape(compoundShape_0, PerimeterFilter(10, 5));
-// retrun shapes that perimeter in range 10 >= && 5 <=, but don't include compoundShape_0 itself.
+// return shapes that perimeter in range 10 >= && 5 <=, but don't include compoundShape_0 itself.
 
 filterShape(compoundShape_0, ColorFilter("white"));
-// retrun shapes that color match "white", but don't include compoundShape_0 itself.
+// return shapes that color match "white", but don't include compoundShape_0 itself.
 
 filterShape(compoundShape_0, TypeFilter("Compound Shape"));
-// retrun shapes that type match "Compound Shape", but don't include compoundShape_0 itself.
+// return shapes that type match "Compound Shape", but don't include compoundShape_0 itself.
 ```
 
 #### File structure:  
