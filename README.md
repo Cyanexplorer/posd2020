@@ -1,30 +1,131 @@
-# Assigment List
+# **Pattern Oriented Software Design 2020 Fall Assignment 6**  
 
-* [Assigment 1](https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/posd2020f_assignment/tree/HW1)  
+## **Notice**  
+* **Due on Tuesday November 10 2020, 23:59.**  
+* **If your code fails to compile on jenkins server, you'll get no point for the assignment.**  
+* **You should add unit test for each requirment under corresponding ut_file.**  
 
-* [Assigment 2](https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/posd2020f_assignment/tree/HW2)  
+## **Score**  
+1. Source Code(Implementation + unit test): 40%.  
+2. Unit tests written by TA: 60%.  
 
-* [Assigment 3](https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/posd2020f_assignment/tree/HW3) 
+## **Useful Reference**  
+[Visitor Pattern](https://refactoring.guru/design-patterns/visitor)  
 
-* [Assigment 4](https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/posd2020f_assignment/tree/HW4) 
+## **Requirement**  
+1. Add function `accept()` in `Shape` as following.  
+````
+class Shape {
+public:
+    virtual void accept(Visitor* visitor) = 0;
+}
+````
+2. Add interface class `Visitor` with overloading function in `visitor.h`.  
+```
+class Visitor {
+public:
+    virtual void visit(Ellipse* ellipse) = 0;
 
-* [Assigment 5](https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/posd2020f_assignment/tree/HW5) 
+    virtual void visit(Triangle* triangle) = 0;
 
-# Homework Rule
+    virtual void visit(Rectangle* rectangle) = 0;
 
-1. 作業準時交，分數視通過測試
+    virtual void visit(CompoundShape* compoundShape) = 0;
+};
+```
+3. Implement `AreaVisitor` in `area_visitor.h` and write the unit test in `ut_visitor.h`.  
+```
+class AreaVisitor : public Visitor {
+public:
+    void visit(Ellipse* ellipse) {
+        // caculate the area of Ellipse.
+        // DO NOT use ellipse->area() to get area directly.
+        // you may add public function for Ellipse to get it's data members.
+    }
 
-   (若無撰寫當次作業欲開發功能之單元測試，將酌量扣分)
+    void visit(Triangle* triangle) {
+        // caculate the area of Triangle.
+        // DO NOT use triangle->area() to get area directly.
+        // you may add public function for Triangle to get it's data members.
+    }
 
-2. Jenkins會於deadline準時關閉,作業於deadline接不受理
+    void visit(Rectangle* rectangle) {
+        // caculate the area of Rectangle.
+        // DO NOT use rectangle->area() to get area directly.
+        // you may add public function for Rectangle to get it's data members.
 
-    TA mail: posd2020ta@gmail.com"
-    
-    **若有其他問題，亦可至宏裕科技大樓Lab1321 軟體系統實驗室，找助教詢問**
+    void visit(CompoundShape* compoundShape) {
+        // caculate the area of CompoundShape.
+        // DO NOT use compoundShape->area() to get area directly.
+        // you may add public function for CompoundShape to get it's data members.
+    }
 
-### Environment Setting
+    double area() const {
+        // return area;
+    }
+};
+```
+4. Implement `InfoVisitor` in `info_visitor.h` and write the unit test in `ut_visitor.h`.  
+```
+class InfoVisitor : public Visitor {
+public:
+    void visit(Ellipse* ellipse) {
+        // create info of ellipse, same way as ellipse->info().
+        // DO NOT use ellipse->info() to get info directly.
+        // you may add public function for Ellipse to get it's data members.
+    }
 
-`Environment Setting`: [https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/environment-setting](https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/environment-setting)
+    void visit(Triangle* triangle) {
+        // create info of ellipse, same way as triangle->info().
+        // DO NOT use triangle->info() to get info directly.
+        // you may add public function for Triangle to get it's data members.
+    }
 
-### Makefile Tutorial
-`makefile_tutorial`: [https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/makefile_tutorial](https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/makefile_tutorial)
+    void visit(Rectangle* rectangle) {
+        // create info of rectangle, same way as rectangle->info().
+        // DO NOT use rectangle->info() to get info directly.
+        // you may add public function for Rectangle to get it's data members.
+
+    void visit(CompoundShape* compoundShape) {
+        // create info of compoundShape, same way as compoundShape->info().
+        // DO NOT use compoundShape->info() to get info directly.
+        // you may add public function for CompoundShape to get it's data members.
+    }
+
+    std::string info() const {
+        // return info;
+    }
+};
+```
+
+#### File structure:  
+```
+├── bin
+│   └── ut_main
+├── src
+│   ├── shape.h
+│   ├── shape.cpp
+│   ├── ellipse.h
+│   ├── rectangle.h
+│   ├── triangle.h
+│   ├── compound_shape.h
+│   ├── iterator.h
+│   ├── null_iterator.h
+│   ├── shape_iterator.h
+│   ├── utility.h
+│   ├── visitor.h
+│   ├── area_visitor.h
+│   ├── info_visitor.h
+│   └── two_dimensional_coordinate.h
+├── test
+│   ├── ut_main.cpp
+│   ├── ut_ellipse.h
+│   ├── ut_rectangle.h
+│   ├── ut_triangle.h
+│   ├── ut_compound_shape.h
+│   ├── ut_iterator.h
+│   ├── ut_utility.h
+│   └── ut_visitor.h
+└── makefile
+
+```
