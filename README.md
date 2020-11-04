@@ -53,6 +53,7 @@ public:
         // caculate the area of Rectangle.
         // DO NOT use rectangle->area() to get area directly.
         // you may add public function for Rectangle to get it's data members.
+    }
 
     void visit(CompoundShape* compoundShape) {
         // caculate the area of CompoundShape.
@@ -85,6 +86,7 @@ public:
         // create info of rectangle, same way as rectangle->info().
         // DO NOT use rectangle->info() to get info directly.
         // you may add public function for Rectangle to get it's data members.
+    }
 
     void visit(CompoundShape* compoundShape) {
         // create info of compoundShape, same way as compoundShape->info().
