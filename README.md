@@ -18,7 +18,7 @@
 [std::deque](http://www.cplusplus.com/reference/deque/deque/)  
 
 ## **Requirement**  
-1. Modify `Compound Shape` constructor, now it's available to accpet empty std::list<Shape*> without throwing exception.  
+1. Modify `CompoundShape` constructor, now it's available to accpet empty std::list<Shape*> without throwing exception.  
 
 2. Add class `Scanner` in `scanner.h` and corresponding unit test in `ut_scanner.h`.  
 ```
