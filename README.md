@@ -27,6 +27,7 @@ public:
     Scanner(std::string input) {}
     
     std::string nextToken() {
+        // DO NOT use regular expression to implement.
         // return next token.
         // throw exception std::string "next char doesn't exist." if next token not found.
     }
