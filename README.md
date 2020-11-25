@@ -36,7 +36,7 @@ public:
 * Purpose of the scanner is to scan through the input and able to send out each token by nextToken().  
 * Ignore the token which is illegal.  
 * For input of `Ellipse` it should be in form of `Ellipse (%.3f, %.3f)`.  
-* For input of `Rectangle` it should be in form of `Triangle (%.3f, %.3f)`.  
+* For input of `Rectangle` it should be in form of `Rectangle (%.3f, %.3f)`.  
 * For input of `Triangle` it should be in form of `Triangle (%.3f, %.3f, %.3f, %.3f, %.3f, %.3f)`.  
 * For input of `Compound Shape` it should be in form of `CompoundShape {}`.  
 * Each Shape should be separate with `,`.  
