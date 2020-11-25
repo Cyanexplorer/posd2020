@@ -148,9 +148,9 @@ TEST(ShapeParserTest, parser_multi_simple_shapes_with_one_shape_contain_invalid_
 
     ASSERT_EQ(3, results.size());
 
-    EXPECT_EQ("Triangle ([0.000, 0.000], [0.000, -3.000], [-4.000, 0.000])", results[0]->info());
+    EXPECT_EQ("Rectangle (3.000, 4.000)", results[0]->info());
     EXPECT_EQ("Ellipse (4.200, 3.700)", results[1]->info());
-    EXPECT_EQ("Rectangle (3.000, 4.000)", results[2]->info());
+    EXPECT_EQ("Triangle ([0.000, 0.000], [0.000, -3.000], [-4.000, 0.000])", results[2]->info());
 }
 ```
 
