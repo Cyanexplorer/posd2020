@@ -12,6 +12,8 @@
 
 * [Assigment 6](https://ssl-gitlab.csie.ntut.edu.tw/posd2020f_hw/posd2020f_assignment/tree/HW6) 
 
+* Assigment 7
+
 # Homework Rule
 
 1. 作業準時交，分數視通過測試
