@@ -27,14 +27,14 @@ public:
     Scanner(std::string input) {}
     
     std::string nextToken() {
-        // DO NOT use regular expression to implement.
         // return next token.
         // throw exception std::string "next char doesn't exist." if next token not found.
     }
 };
 ```
 * Purpose of the scanner is to scan through the input and able to send out each token by nextToken().  
-* Ignore the token which is illegal.  
+* Ignore the token which is illegal. 
+* DO NOT use regular expression to implement. 
 * For input of `Ellipse` it should be in form of `Ellipse (%.3f, %.3f)`.  
 * For input of `Rectangle` it should be in form of `Rectangle (%.3f, %.3f)`.  
 * For input of `Triangle` it should be in form of `Triangle (%.3f, %.3f, %.3f, %.3f, %.3f, %.3f)`.  
