@@ -114,7 +114,7 @@ public:
     
     void parser() {
         // using Scanner::nextToken() to get all information to determine what to build,
-        // and provid the argument the shape needed.
+        // and provide the argument the shape needed.
         // use functions in ShapeBuilder to build out the shape.
         // the shape with invalid argument should be ignored (see example bellow).
     }
