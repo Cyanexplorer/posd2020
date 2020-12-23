@@ -57,7 +57,7 @@ std::list<Shape*> data = {// lots of shapes};
 
 Filter* areaFilter = new ShapeFilter([](Shape* shape) {return shape->perimeter() <= 30;});
 Filter* perimeterilter = new ShapeFilter([](Shape* shape) {return shape->perimeter() >= 15;});
-Filter* colorFilter = new ShapeSetter([](Shape* shape) {shape->setColor("blue");});
+Filter* colorFilter = new ShapeFilter([](Shape* shape) {return shape->color() == "black";})
 
 areaFilter->setNext(perimeterilter)->setNext(colorFilter);
 std::list<Shape*> results = areaFilter_1->push(data);
