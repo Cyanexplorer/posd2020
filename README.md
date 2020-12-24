@@ -56,11 +56,11 @@ public:
 std::list<Shape*> data = {// lots of shapes};
 
 Filter* areaFilter = new ShapeFilter([](Shape* shape) {return shape->perimeter() <= 30;});
-Filter* perimeterilter = new ShapeFilter([](Shape* shape) {return shape->perimeter() >= 15;});
+Filter* perimeterFilter = new ShapeFilter([](Shape* shape) {return shape->perimeter() >= 15;});
 Filter* colorFilter = new ShapeFilter([](Shape* shape) {return shape->color() == "black";});
 
-areaFilter->setNext(perimeterilter)->setNext(colorFilter);
-std::list<Shape*> results = areaFilter_1->push(data);
+areaFilter->setNext(perimeterFilter)->setNext(colorFilter);
+std::list<Shape*> results = areaFilter->push(data);
 ```
 
 4. Add class `ShapeSetter` in `shape_setter.h` and corresponding unit test in `ut_filter.h`.  
@@ -88,11 +88,11 @@ public:
 std::list<Shape*> data = {// lots of shapes};
 
 Filter* areaFilter = new ShapeFilter([](Shape* shape) {return shape->area() < 30;});
-Filter* perimeterilter = new ShapeFilter([](Shape* shape) {return shape->perimeter() > 150;});
+Filter* perimeterFilter = new ShapeFilter([](Shape* shape) {return shape->perimeter() > 150;});
 Filter* colorSetter = new ShapeSetter([](Shape* shape) {shape->setColor("black");});
 
-areaFilter->setNext(perimeterilter)->setNext(colorSetter);
-std::list<Shape*> results = areaFilter_1->push(data);
+areaFilter->setNext(perimeterFilter)->setNext(colorSetter);
+std::list<Shape*> results = areaFilter->push(data);
 ```
 
 #### File structure:  
